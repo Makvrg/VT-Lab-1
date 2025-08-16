@@ -10,7 +10,7 @@ public class Lab1 {
         double[][] d = new double[7][18];
         d = Calc.getD(w, x);
 
-        Print.print_matrix(d);
+        Printer.printMatrix(d);
 
     }
 
