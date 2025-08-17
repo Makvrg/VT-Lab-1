@@ -2,29 +2,30 @@ import static java.lang.Math.*;
 
 public class Calc {
 
-    public static float[] getX() {
+    public static float[] calculateRandomArrayX(int length) {
+        float[] newX = new float[length];
 
-        float[] newX = new float[18];
-
-        for (byte i = 0; i < 18; i++) {
+        for (int i = 0; i < length; i++) {
             newX[i] = (float) (random() * 14 - 10);
         }
         return newX;
     }
 
+    public static double[][] calculateArrayD(short[] w,
+                                             float[] x,
+                                             int rows,
+                                             int columns) {
+        double[][] newD = new double[rows][columns];
 
-    public static double[][] getD(short[] w, float[] x) {
-
-        double[][] newD = new double[7][18];
-
-        for (byte i = 0; i < 7; i++) {
-            for (byte j = 0; j < 18; j++) {
-                newD[i][j] = (w[i] == 12) ? Formula.F1(x[j])
-                                : (w[i] == 4 || w[i] == 8 || w[i] == 16) ? Formula.F2(x[j])
-                                    : Formula.F3(x[j]);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                newD[i][j] = (w[i] == 12)
+                        ? Formula.formula1(x[j])
+                        : (w[i] == 4 || w[i] == 8 || w[i] == 16)
+                                ? Formula.formula2(x[j])
+                                : Formula.formula3(x[j]);
             }
         }
         return newD;
     }
-
 }
