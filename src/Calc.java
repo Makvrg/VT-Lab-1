@@ -2,19 +2,21 @@ import static java.lang.Math.*;
 
 public class Calc {
 
-    public static float[] calculateRandomArrayX(int length) {
+    public static float[] generateRandomArray(int length,
+                                              int from,
+                                              int to) {
         float[] newX = new float[length];
 
         for (int i = 0; i < length; i++) {
-            newX[i] = (float) (random() * 14 - 10);
+            newX[i] = (float) (random() * (to - from) + from);
         }
         return newX;
     }
 
-    public static double[][] calculateArrayD(short[] w,
-                                             float[] x,
-                                             int rows,
-                                             int columns) {
+    public static double[][] calculateArrayByFormulas(short[] w,
+                                                      float[] x,
+                                                      int rows,
+                                                      int columns) {
         double[][] newD = new double[rows][columns];
 
         for (int i = 0; i < rows; i++) {
