@@ -5,29 +5,29 @@ public class Calc {
     public static float[] generateRandomArray(int length,
                                               int from,
                                               int to) {
-        float[] newX = new float[length];
+        float[] array = new float[length];
 
         for (int i = 0; i < length; i++) {
-            newX[i] = (float) (random() * (to - from) + from);
+            array[i] = (float) (random() * (to - from) + from);
         }
-        return newX;
+        return array;
     }
 
-    public static double[][] calculateArrayByFormulas(short[] w,
-                                                      float[] x,
-                                                      int rows,
-                                                      int columns) {
-        double[][] newD = new double[rows][columns];
+    public static double[][] calculateMatrixByFormulas(short[] fixArray,
+                                                       float[] randomArray,
+                                                       int rows,
+                                                       int columns) {
+        double[][] array = new double[rows][columns];
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                newD[i][j] = (w[i] == 12)
-                        ? Formula.formula1(x[j])
-                        : (w[i] == 4 || w[i] == 8 || w[i] == 16)
-                                ? Formula.formula2(x[j])
-                                : Formula.formula3(x[j]);
+                array[i][j] = (fixArray[i] == 12)
+                        ? Formula.formula1(randomArray[j])
+                        : (fixArray[i] == 4 || fixArray[i] == 8 || fixArray[i] == 16)
+                                ? Formula.formula2(randomArray[j])
+                                : Formula.formula3(randomArray[j]);
             }
         }
-        return newD;
+        return array;
     }
 }
