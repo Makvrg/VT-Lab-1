@@ -2,4 +2,4 @@
 
 java -jar Laba1.jar
 
-echo ".jar-файл успешно запущен"
+echo "Файл Laba1.jar-файл успешно запущен"

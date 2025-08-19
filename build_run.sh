@@ -6,4 +6,4 @@ jar cvef com.example.laba.Lab1 Laba1.jar -C bin .
 
 java -jar Laba1.jar
 
-echo ".jar-файл успешно создан и запущен"
+echo "Файл Laba1.jar успешно создан и запущен"
