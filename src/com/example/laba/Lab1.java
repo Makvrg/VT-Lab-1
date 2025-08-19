@@ -1,3 +1,5 @@
+package com.example.laba;
+
 public class Lab1 {
 
     private static final int LENGTH_OF_RANDOM_ARRAY = 18;

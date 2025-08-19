@@ -1,3 +1,5 @@
+package com.example.laba;
+
 import static java.lang.Math.*;
 
 public class Formula {
